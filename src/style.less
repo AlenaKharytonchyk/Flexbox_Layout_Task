@@ -1,3 +1,14 @@
+//---------------------------------
+//Variables and Mixins
+@stringVar: "Logo ";
+.logoStyle (@font-size) {
+  &:before{
+    content: @stringVar;
+    font-size: @font-size;
+    font-family: 'Alfa Slab One', cursive;
+    font-style: italic;
+  }
+}
 .border {
   border: 1.5px solid #E7E7E7;
   border-radius: 5px;
@@ -7,6 +18,8 @@
 &:-moz-placeholder          {color:#A4A0A0;}
 &:-ms-input-placeholder      {color:#A4A0A0;}
 }
+//--------------------------------
+
 body {
   background-color: #373737;
   color: #737373;
@@ -85,5 +98,57 @@ header {
       }
     }
     }
-    
   }
+ footer section {
+  margin: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  ol {
+    list-style: none;
+    li {
+      display: inline;
+      margin-right: 0.5em;
+    }
+  }
+  p {
+    color: #EBEAEC;
+   
+  }
+   &.footer-social {
+    li {
+      border-radius: 50%;
+      background-color: #EBEAEC;
+      padding: 5px;
+      i {
+        width: 1em;
+        height: 1em;
+      }
+    }
+    p {
+      .logoStyle(1em);
+    }
+  }
+  &.footer-contacts {
+    font-size: 0.7em;
+    p {
+      .logoStyle(2.5em);
+    }
+    li {
+      color: #737373;
+      border-right: 1px solid #737373;
+      padding-right: 5px;
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+ } 
+ hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #A4A0A0;
+  margin: 2em;
+  padding: 0;
+}
