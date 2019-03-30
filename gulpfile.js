@@ -12,7 +12,7 @@ const cssnano = require('cssnano');
 const connect = require('gulp-connect');
 
 function html() {
-  const target = src('./src/index.html');
+  const target = src(['./src/index.html', './src/chat.html']);
   const sources = src(['./build/js/*.js', './build/css/*.css'], {
     read: false
   });
@@ -51,7 +51,7 @@ function js() {
 function watchTask(cb) {
   watch('src/*.less', css);
   watch('src/*.js', js);
-  watch('src/index.html', html);
+  watch('src/*.html', html);
   cb();
 }
 exports.watch = series(parallel(css, js), html, parallel(webserver, watchTask));
