@@ -1,16 +1,54 @@
-html, body {
+html,
+body {
   height: 100%;
 }
 .chat-page {
   background-color: #373737;
   color: #737373;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 header {
   height: 3vw;
 }
 section {
-  background-color: #FAF9F9;
+  background-color: #faf9f9;
   border: solid 1px red;
   height: inherit;
+}
+.main-section {
+  display: flex;
+  .chat-search {
+    flex-grow: 1;
+  }
+  .chat-window {
+    flex-grow: 6;
+    display: flex;
+    flex-direction: column;
+    header {
+      border: red 1px solid;
+      flex-grow: 1;
+    }
+    section {
+      flex-grow: 10;
+      display: flex;
+      flex-direction: column;
+      article {
+        border: red 1px solid;
+        flex-grow: 10;
+        display: flex;
+        main {
+          flex-grow: 4;
+          border: red 1px solid;
+        }
+        aside {
+          border: red 1px solid;
+          flex-grow: 1;
+        }
+      }
+      footer {
+        border: red 1px solid;
+        flex-grow: 1;
+      }
+    }
+  }
 }
