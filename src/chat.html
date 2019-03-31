@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
+      href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
@@ -18,23 +22,34 @@
     <header></header>
     <section class="main-section">
       <section class="chat-search">
-        <input type="search" name="search" id="search" placeholder="Search" />
-        <div>
+        <input
+          type="search"
+          name="search"
+          id="search"
+          placeholder="&#xf002; Search"
+        />
+        <div class="icon">
           <i class="far fa-comments"></i>
         </div>
-        <div>
-          <i class="fas fa-pager"></i>
-          <p>Communities</p>
+        <div class="communities-list">
+          <img src="./assets/speech-bubble.png" class="communities-image" />
+          <span class="communities-name">Communities</span>
         </div>
-        <div>
-          <p>All</p>
-          <p>You: message deleted</p>
-          <p>10:51 PM</p>
+        <div class="communities-list">
+          <img src="./assets/group.png" class="communities-image" />
+          <span class="communities-name">
+            <div class="communities-name">All</div>
+            <div class="communities-message">
+              <span class="communities-message__whoSaid">You:</span
+              ><span class="communities-message__phrase">message deleted</span>
+            </div>
+          </span>
+          <span class="right communities-date">10:51 PM</span>
         </div>
-        <div>
-          <p>Mentee</p>
-          <p></p>
-          <p>Tuesday</p>
+        <div class="communities-list">
+          <img src="./assets/speak.png" class="communities-image" />
+          <span class="communities-name">Mentee</span>
+          <span class="right communities-date">Tuesday</span>
         </div>
       </section>
       <section class="chat-window">

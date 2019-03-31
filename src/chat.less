@@ -1,27 +1,100 @@
 html,
-body {
+body.chat-page{
   height: 100%;
 }
 .chat-page {
   background-color: #373737;
   color: #737373;
   font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 header {
-  height: 3vw;
+  flex-grow: 1;
 }
-section {
+.chat-page section {
   background-color: #faf9f9;
   border: solid 1px red;
   height: inherit;
 }
 .main-section {
+  flex-grow: 10;
   display: flex;
   .chat-search {
     flex-grow: 1;
+    input {
+    width: 100%;
+    height: 2vw;
+    border: none;
+    padding-left: 5px;
+    align-self: center;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+  }
+  div.icon{
+    width: 100%;
+    height: 1.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5E5E5;
+    border: solid 1px #A4A0A0;
+  }
+  div.communities-list {
+    width: 100%;
+    height: 2.5vw;
+    display: flex;
+    border-bottom: solid 1px #A4A0A0;
+    padding: 0.3em;
+  }
+   .communities-image{
+    width: 2em;
+    min-width: 10px;
+    height: 2vw;
+    border: solid 1px #A4A0A0;
+    align-self: center;
+  }
+  span {
+    display: flex;
+    align-self: center;
+    // padding-left: 10px;
+  }
+  .communities-name {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em;
+    font-size: 0.9em;
+    font-weight: 700;
+    div {
+      padding: 0;
+    }
+  }
+  .communities-date {
+    font-size: 0.7em;
+    font-weight: 400;
+  }
+  .right {
+    margin-left: auto;
+    padding-right: 1em;
+  }
+  .communities-message {
+    display: flex;
+    padding: 0 1em;
+    .communities-message__whoSaid{
+      font-size: 0.8em;
+      font-weight: 600;
+    }
+    .communities-message__phrase {
+      font-size: 0.7em;
+      font-weight: 400;
+    }
+  }
+  
   }
   .chat-window {
-    flex-grow: 6;
+    flex-grow: 20;
     display: flex;
     flex-direction: column;
     header {

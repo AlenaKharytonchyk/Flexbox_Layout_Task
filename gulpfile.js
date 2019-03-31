@@ -48,11 +48,17 @@ function js() {
     .pipe(dest('build/js', { sourcemaps: true }))
     .pipe(connect.reload());
 }
+function img() {
+  return src('src/assets/*.png')
+    .pipe(dest('build/assets'));
+}
 function watchTask(cb) {
   watch('src/*.less', css);
   watch('src/*.js', js);
   watch('src/*.html', html);
+  watch('src/assets/*.png', img);
   cb();
 }
-exports.watch = series(parallel(css, js), html, parallel(webserver, watchTask));
-exports.default = series(parallel(css, js), html);
+
+exports.watch = series(parallel(css, js, img), html, parallel(webserver, watchTask));
+exports.default = series(parallel(css, js, img), html);

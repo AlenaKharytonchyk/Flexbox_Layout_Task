@@ -20,15 +20,19 @@
 }
 //--------------------------------
 
-body {
+body.index-page{
   background-color: #373737;
   color: #737373;
   font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 header {
   height: 3vw;
+  flex-grow: 3;
 }
 .login-section {
+  flex-grow: 7;
   min-height: 33vw;
   background-color: #FAF9F9;
   display: flex;
@@ -99,7 +103,10 @@ header {
     }
     }
   }
- footer section {
+ footer {
+  flex-grow: 3;
+ 
+ section {
   margin: 2em;
   display: flex;
   justify-content: space-between;
@@ -152,3 +159,4 @@ header {
   margin: 2em;
   padding: 0;
 }
+ }
