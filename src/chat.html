@@ -53,13 +53,46 @@
         </div>
       </section>
       <section class="chat-window">
-        <header></header>
-        <section>
+        <header>
+          <div class="communities-list">
+            <img src="./assets/group.png" class="communities-image" />
+            <span class="communities-name">
+              <div class="communities-name">All</div>
+              <div class="communities-message__chat">
+                <span class="communities-message__participants"
+                  >5 participants</span
+                ><span class="communities-message__conversation"
+                  >Conversation</span
+                >
+              </div>
+            </span>
+            <button class="right">Start conversation</button>
+          </div>
+        </header>
+        <section class="chat-section">
           <article>
             <main></main>
             <aside></aside>
           </article>
-          <footer></footer>
+          <footer class="chat-message-container">
+            <div class="chat-message-area">
+            <textarea name="chat-message-text" id="chat-message-text">
+Write your message</textarea
+            >
+
+            <div class="chat-message-buttons">
+              <span class="chat-message-button style"
+                ><i class="fas fa-font"></i
+              ></span>
+              <span class="chat-message-button picture"
+                ><i class="fas fa-image"></i
+              ></span>
+              <span class="chat-message-button paste"
+                ><i class="fas fa-paperclip"></i
+              ></span>
+            </div>
+            </div>
+          </footer>
         </section>
       </section>
     </section>

@@ -1,3 +1,12 @@
+//----------
+.right {
+  margin-left: auto;
+  padding-right: 1em;
+}
+.border { 
+  border: solid 1px #A4A0A0;
+}
+//----------
 html,
 body.chat-page{
   height: 100%;
@@ -14,14 +23,14 @@ header {
 }
 .chat-page section {
   background-color: #faf9f9;
-  border: solid 1px red;
   height: inherit;
 }
 .main-section {
   flex-grow: 10;
   display: flex;
-  .chat-search {
+  .chat-search, .chat-window header {
     flex-grow: 1;
+    .border;
     input {
     width: 100%;
     height: 2vw;
@@ -40,7 +49,7 @@ header {
     justify-content: center;
     align-items: center;
     background-color: #E5E5E5;
-    border: solid 1px #A4A0A0;
+    .border;
   }
   div.communities-list {
     width: 100%;
@@ -53,7 +62,7 @@ header {
     width: 2em;
     min-width: 10px;
     height: 2vw;
-    border: solid 1px #A4A0A0;
+    .border;
     align-self: center;
   }
   span {
@@ -76,8 +85,7 @@ header {
     font-weight: 400;
   }
   .right {
-    margin-left: auto;
-    padding-right: 1em;
+    .right;
   }
   .communities-message {
     display: flex;
@@ -98,10 +106,35 @@ header {
     display: flex;
     flex-direction: column;
     header {
-      border: red 1px solid;
       flex-grow: 1;
+      .border;
+      .communities-message__chat {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1em;
+      }
+      .communities-message__participants {
+        font-size: 0.8em;
+        font-weight: 400;
+      }
+      .communities-message__conversation {
+        font-size: 0.8em;
+        font-weight: 600;
+      }
+    button {
+      // .right;
+      margin-right: 1em;
+      font-size: 0.7em;
+      font-weight: 400;
+      background-color: #8DC058;
+      .border;
+      border-radius: 1em;
+      color: #E5E5E5;
+      font-weight: 600;
+      cursor: pointer;
     }
-    section {
+    }
+    section.chat-section {
       flex-grow: 10;
       display: flex;
       flex-direction: column;
@@ -118,9 +151,36 @@ header {
           flex-grow: 1;
         }
       }
-      footer {
-        border: red 1px solid;
+      footer.chat-message-container {
+        .border;
         flex-grow: 1;
+        background-color: #E5E5E5;
+        display: flex;
+        align-items: center;
+        .chat-message-area{
+          display: flex;
+          background-color: #FFFFFF;
+          .border;
+          margin-left: 5em;
+        }
+        #chat-message-text {
+          width: 50vw;
+          min-width: 250px;
+          height: 2em;
+          background-color: #FFFFFF;
+          border: none;
+        }
+        .chat-message-buttons {
+          background-color: #FFFFFF;
+          height: 2em;
+          width: 5em;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          .chat-message-button {
+
+          }
+        }
       }
     }
   }
