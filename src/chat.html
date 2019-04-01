@@ -14,6 +14,10 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
     <title>Logo Chat</title>
     <!-- inject:css -->
     <!-- endinject -->
@@ -32,7 +36,7 @@
           <i class="far fa-comments"></i>
         </div>
         <div class="communities-list">
-          <img src="./assets/speech-bubble.png" class="communities-image" />
+          <img src="./assets/community.png" class="communities-image" />
           <span class="communities-name">Communities</span>
         </div>
         <div class="communities-list">
@@ -53,7 +57,7 @@
         </div>
       </section>
       <section class="chat-window">
-        <header>
+        <header class="chat-window-header">
           <div class="communities-list">
             <img src="./assets/group.png" class="communities-image" />
             <span class="communities-name">
@@ -90,7 +94,13 @@
                 </div>
               </div>
             </main>
-            <aside></aside>
+            <aside class="participants">
+              <div class="participants-container">
+                <span class="participants-header">Available participants</span>
+                <hr>
+                <span class="participants-list">No participants available</span>
+              </div>
+            </aside>
           </article>
           <footer class="chat-message-container">
             <div class="chat-message-area">

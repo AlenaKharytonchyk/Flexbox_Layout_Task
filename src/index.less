@@ -19,7 +19,10 @@
 &:-ms-input-placeholder      {color:#A4A0A0;}
 }
 //--------------------------------
-
+html,
+body.index-page {
+  height: 100%;
+}
 body.index-page{
   background-color: #373737;
   color: #737373;
@@ -27,13 +30,14 @@ body.index-page{
   display: flex;
   flex-direction: column;
 }
-header {
-  height: 3vw;
-  flex-grow: 3;
+header.index {
+  flex-grow: 1;
+  flex-basis: calc(100% / 11 * 1);
 }
 .login-section {
   flex-grow: 7;
-  min-height: 33vw;
+  flex-basis: calc(100%/11*7);
+  // min-height: 33vw;
   background-color: #FAF9F9;
   display: flex;
   justify-content: center;
@@ -105,6 +109,7 @@ header {
   }
  footer {
   flex-grow: 3;
+  flex-basis: calc(100% / 11 * 1);
  
  section {
   margin: 2em;
