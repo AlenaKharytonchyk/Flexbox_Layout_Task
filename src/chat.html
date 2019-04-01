@@ -23,7 +23,13 @@
     <!-- endinject -->
   </head>
   <body class="chat-page">
-    <header></header>
+    <header>
+      <div class="user-info">
+        <span>green</span>
+        <img src="assets/speak.png" />
+        <span class="user-email"></span>
+      </div>
+    </header>
     <section class="main-section">
       <section class="chat-search">
         <input
@@ -52,7 +58,7 @@
         </div>
         <div class="communities-list">
           <img src="./assets/speak.png" class="communities-image" />
-          <span class="communities-name">Mentee</span>
+          <span class="communities-name user-email"></span>
           <span class="right communities-date">Tuesday</span>
         </div>
       </section>
@@ -70,7 +76,7 @@
                 >
               </div>
             </span>
-            <button class="right">Start conversation</button>
+            <button class="right" id="start-chat">Start conversation</button>
           </div>
         </header>
         <section class="chat-section">
@@ -78,10 +84,10 @@
             <main class="chat-section-field">
               <div class="chat-section-card">
                 <div>
-                <img src="./assets/speak.png" class="communities-image" />
-              </div>
+                  <img src="./assets/speak.png" class="communities-image" />
+                </div>
                 <div class="chat-section-card-text">
-                  <span class="communities-name">Mentee</span>
+                  <span class="communities-name user-email"></span>
                   <div class="chat-section-message">
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -97,7 +103,7 @@
             <aside class="participants">
               <div class="participants-container">
                 <span class="participants-header">Available participants</span>
-                <hr>
+                <hr />
                 <span class="participants-list">No participants available</span>
               </div>
             </aside>
@@ -124,6 +130,7 @@ Write your message</textarea
         </section>
       </section>
     </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!-- inject:js -->
     <!-- endinject -->
   </body>

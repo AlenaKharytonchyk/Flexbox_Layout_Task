@@ -48,6 +48,10 @@ function js() {
     .pipe(dest('build/js', { sourcemaps: true }))
     .pipe(connect.reload());
 }
+function json() {
+  return src('src/*.json')
+    .pipe(dest('build'));
+}
 function img() {
   return src('src/assets/*.png')
     .pipe(dest('build/assets'));
@@ -55,10 +59,11 @@ function img() {
 function watchTask(cb) {
   watch('src/*.less', css);
   watch('src/*.js', js);
+  watch('src/*.json', json);
   watch('src/*.html', html);
   watch('src/assets/*.png', img);
   cb();
 }
 
-exports.watch = series(parallel(css, js, img), html, parallel(webserver, watchTask));
-exports.default = series(parallel(css, js, img), html);
+exports.watch = series(parallel(css, js, json, img), html, parallel(webserver, watchTask));
+exports.default = series(parallel(css, js, json, img), html);
