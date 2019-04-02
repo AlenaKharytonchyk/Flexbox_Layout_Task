@@ -1,5 +1,14 @@
 //---------------------------------
 //Variables and Mixins
+@body-background-color: #373737;
+@login-section-bg-color: #FAF9F9;
+@second-elements-bg-color: #EBEAEC;
+@main-text-color: #737373;
+@second-elements-color: #A4A0A0;
+@third-elements-color: #E7E7E7;
+@border-color: rgba(164, 160, 160, 0.3);
+@button-color: #8DC058;
+@white: #fff;
 @stringVar: "Logo ";
 .logoStyle (@font-size) {
   &:before{
@@ -10,22 +19,23 @@
   }
 }
 .border {
-  border: 1.5px solid #E7E7E7;
+  border: 1.5px solid @border-color;
   border-radius: 5px;
 }
 .placeholder {
-&::-webkit-input-placeholder {color:#A4A0A0;}
-&:-moz-placeholder          {color:#A4A0A0;}
-&:-ms-input-placeholder      {color:#A4A0A0;}
+&::-webkit-input-placeholder {color:@second-elements-color;}
+&:-moz-placeholder          {color:@second-elements-color;}
+&:-ms-input-placeholder      {color:@second-elements-color;}
 }
 //--------------------------------
 html,
 body.index-page {
   height: 100%;
+  margin: 0;
 }
 body.index-page{
-  background-color: #373737;
-  color: #737373;
+  background-color: @body-background-color;
+  color: @main-text-color; 
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
@@ -37,13 +47,9 @@ header.index {
 .login-section {
   flex-grow: 7;
   flex-basis: calc(100%/11*7);
-  // min-height: 33vw;
-  background-color: #FAF9F9;
+  background-color: @login-section-bg-color;
   display: flex;
   justify-content: center;
-  // align-items: center;
-
-  
 }
 .form-section{
   display: flex;
@@ -55,13 +61,13 @@ header.index {
   justify-content: flex-start;
   align-items: stretch;
   button {
-    color: #A4A0A0;
+    color: @second-elements-color;
     border: none;
-    background-color: #FAF9F9;
+    background-color: @login-section-bg-color;
     font-weight: 700;
     padding-top: 3%;
       &:hover{
-      color: #8DC058;
+      color: @button-color;
     }
   }
   p {
@@ -80,8 +86,8 @@ header.index {
         width: auto;
       }
       &.submit {
-        color: #E7E7E7;
-        background-color: #8DC058;
+        color: @third-elements-color;
+        background-color: @button-color;
         min-height: 2vw;
         cursor: pointer;
       }
@@ -97,7 +103,7 @@ header.index {
         margin-top: 0px;
       }
       div {
-        color: #A4A0A0;
+        color: @second-elements-color;
         font-size: 0.9em;
         margin-left: 10%;
         label:first-child{
@@ -124,13 +130,13 @@ header.index {
     }
   }
   p {
-    color: #EBEAEC;
+    color: @second-elements-bg-color;
    
   }
    &.footer-social {
     li {
       border-radius: 50%;
-      background-color: #EBEAEC;
+      background-color: @second-elements-bg-color;
       padding: 5px;
       i {
         width: 1em;
@@ -147,8 +153,8 @@ header.index {
       .logoStyle(2.5em);
     }
     li {
-      color: #737373;
-      border-right: 1px solid #737373;
+      color: @main-text-color;
+      border-right: 1px solid @border-color;
       padding-right: 5px;
       &:last-child {
         border: none;
@@ -160,7 +166,7 @@ header.index {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #A4A0A0;
+  border-top: 1px solid @border-color;
   margin: 2em;
   padding: 0;
 }
