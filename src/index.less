@@ -131,6 +131,7 @@ header.index {
   }
   p {
     color: @second-elements-bg-color;
+    font-size: .8em;
    
   }
    &.footer-social {
@@ -144,13 +145,13 @@ header.index {
       }
     }
     p {
-      .logoStyle(1em);
+      .logoStyle(1.5em);
     }
   }
   &.footer-contacts {
     font-size: 0.7em;
     p {
-      .logoStyle(2.5em);
+      .logoStyle(3em);
     }
     li {
       color: @main-text-color;
@@ -159,9 +160,18 @@ header.index {
       &:last-child {
         border: none;
       }
+      
+      
     }
   }
  } 
+ a {
+  text-decoration: none;
+  color: @main-text-color;
+  &:hover {
+    color: @button-color;
+  }
+}
  hr {
   display: block;
   height: 1px;
