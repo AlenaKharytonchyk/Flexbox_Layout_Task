@@ -1,5 +1,4 @@
 $('#login-form').submit(function submit(event) {
-  // debugger;
   const email = $('#email').val();
   const myComputer = $('#keep-sign').prop('checked');
   if (myComputer) {
@@ -12,6 +11,7 @@ $('#login-form').submit(function submit(event) {
   window.location = 'chat.html';
   event.preventDefault();
 });
+
 (function onInit() {
   const userEmail = localStorage.getItem('userEmail');
   $('#email').val(userEmail);
