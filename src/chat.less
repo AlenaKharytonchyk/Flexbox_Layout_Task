@@ -37,6 +37,27 @@ body.chat-page {
 header {
   flex-grow: 1;
   flex-basis: calc(100% / 11 * 1);
+  .user-info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: .5em;
+    .green-shape {
+      border: none;
+      color: #8DC058;
+      background-color: #8DC058;
+      border-radius: 50%;
+      width: .5em;
+      height: .5em;
+    }
+    img.communities-image {
+      .communities-image;
+      margin: 0 .5em;
+    }
+    .user-email {
+      color: #fff;
+    }
+  }
 }
 .chat-page section {
   background-color: #faf9f9;
@@ -193,15 +214,19 @@ header {
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
+            overflow: scroll;
+
             div.chat-section-card {
               display: flex;
               justify-content: flex-start;
               width: 60%;
               height: 10em;
+              margin: .9em 0;
               .border;
               border-radius: 3px;
               background-color: #fff;
               padding: 0.5em;
+              overflow: hidden;
               .communities-image {
                 flex-grow: 1;
                 flex-basis: calc(100% / 8 * 1);
