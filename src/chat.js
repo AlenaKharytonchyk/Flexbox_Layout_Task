@@ -12,7 +12,7 @@ $('#start-chat').click(function startChat() {
 });
 
 function newMessageInChat(userEmail, message, strDate) {
-  $('<div/>', {
+  $('<article/>', {
     class: 'chat-section-card',
     html: `<div>
                 <img src="./assets/speak.png" class="communities-image" />

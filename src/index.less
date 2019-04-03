@@ -38,7 +38,8 @@ html,
 body.index-page {
   height: 100%;
   margin: 0;
-  overflow: hidden;
+  min-width: 500px;
+  // overflow: hidden;
 }
 body.index-page {
   background-color: @body-background-color;
@@ -58,7 +59,7 @@ header.index {
   flex-basis: calc(100% / 11 * 7);
   max-height: 462px;
   background-color: @login-section-bg-color;
-  display: flex;
+  // display: flex;
   justify-content: center;
 }
 .form-section {
@@ -68,14 +69,15 @@ header.index {
   height: inherit;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
+  margin: 0 auto;
+  // justify-content: flex-start;
+  // align-items: stretch;
   button {
     color: @second-elements-color;
     border: none;
     background-color: @login-section-bg-color;
     font-weight: 700;
-    padding-top: 3%;
+    padding: 1em;
     &:hover {
       color: @button-color;
     }
