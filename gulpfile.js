@@ -10,6 +10,7 @@ const eslint = require('gulp-eslint');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const connect = require('gulp-connect');
+const babel = require('gulp-babel');
 
 function html() {
   const target = src(['./src/index.html', './src/chat.html']);
@@ -44,6 +45,7 @@ function js() {
   return src('src/*.js', { sourcemaps: true })
     .pipe(eslint())
     .pipe(eslint.format())
+    .pipe(babel({ presets: ['@babel/preset-env'] }))
     .pipe(concat('app.min.js'))
     .pipe(dest('build/js', { sourcemaps: true }))
     .pipe(connect.reload());

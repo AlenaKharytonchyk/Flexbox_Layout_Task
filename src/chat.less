@@ -28,7 +28,6 @@
 .communities-list(@height, @padding) {
   height: @height;
   display: flex;
-  // border-bottom: solid 1px #a4a0a0;
   padding: @padding;
 }
 //----------
@@ -37,6 +36,7 @@ body.chat-page {
   height: 100%;
   font-family: "Roboto", sans-serif;
   margin: 0;
+  overflow: hidden;
 }
 .chat-page {
   background-color: @body-background-color;
@@ -216,19 +216,15 @@ header {
           .border;
           box-shadow: inset 6px 6px 5px -5px @second-elements-color;
           &.chat-section-field {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
+            overflow: auto;
             align-items: center;
-            overflow: scroll;
 
             div.chat-section-card {
               display: flex;
               justify-content: flex-start;
               width: 60%;
-              height: 10em;
               min-height: 5em;
-              margin: .9em 0;
+              margin: .9em auto;
               .border;
               border-radius: 3px;
               background-color: @white;

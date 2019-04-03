@@ -1,18 +1,20 @@
-$('#start-chat').click(function startChat() {
-  alert("Let's start!");
-});
-
-const email = localStorage.getItem('userEmail');
-$('.user-email').text(email);
+(function initUser() {
+  const email = localStorage.getItem('userEmail');
+  $('.user-email').text(email);
+}());
 
 const monthNames = [
   'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
 ];
+
+$('#start-chat').click(function startChat() {
+  alert("Let's start!");
+});
+
 function newMessageInChat(userEmail, message, strDate) {
   $('<div/>', {
     class: 'chat-section-card',
-    html: `
-    <div>
+    html: `<div>
                 <img src="./assets/speak.png" class="communities-image" />
               </div>
               <div class="chat-section-card-text">
@@ -29,7 +31,12 @@ function newMessageInChat(userEmail, message, strDate) {
                   </p>
               </div>`
   }).appendTo('.chat-section-field');
+
+  $('.chat-section-field').animate({
+    scrollTop: $('.chat-section-field').last().prop('scrollHeight')
+  });
 }
+
 $.getJSON('chat-message.json').done(function json(data) {
   $.each(data, function newChatElement(key, value) {
     const { speakerName, speakerMessage, messageDate } = value;
@@ -37,10 +44,11 @@ $.getJSON('chat-message.json').done(function json(data) {
   });
 });
 
-$('#chat-message-text').keydown(function keydown(event) {
-  let message = $('textarea').val();
-  let date = new Date();
-  let strDate = date.getDate() + ' ' + monthNames[date.getMonth() + 1] + ' ' + date.getFullYear();
+$('#chat-message-text').keyup(function keyup(event) {
+  const email = localStorage.getItem('userEmail');
+  const message = $('textarea').val();
+  const date = new Date();
+  const strDate = date.getDate() + ' ' + monthNames[date.getMonth() + 1] + ' ' + date.getFullYear();
   if (event.keyCode === 13) {
     if (message === '') {
       alert('Enter Some Text In Textarea');
