@@ -4,7 +4,9 @@
   "description": "Please create two layouts using flexbox properties as much as possible: - img/screen_log_in.png - img/screen.png",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "gulp default",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -16,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/AlenaKharytonchyk/Flexbox_Layout_Task/issues"
   },
-  "homepage": "https://github.com/AlenaKharytonchyk/Flexbox_Layout_Task#readme",
+  "homepage": "https://alenakharytonchyk.github.io/Flexbox_Layout_Task/",
   "devDependencies": {
     "@babel/core": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
@@ -25,6 +27,7 @@
     "eslint": "^5.3.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
+    "gh-pages": "^2.0.1",
     "gulp": "^4.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
