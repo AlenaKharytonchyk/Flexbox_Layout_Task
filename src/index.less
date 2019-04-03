@@ -1,20 +1,20 @@
 //---------------------------------
 //Variables and Mixins
 @body-background-color: #373737;
-@login-section-bg-color: #FAF9F9;
-@second-elements-bg-color: #EBEAEC;
+@login-section-bg-color: #faf9f9;
+@second-elements-bg-color: #ebeaec;
 @main-text-color: #737373;
-@second-elements-color: #A4A0A0;
-@third-elements-color: #E7E7E7;
+@second-elements-color: #a4a0a0;
+@third-elements-color: #e7e7e7;
 @border-color: rgba(164, 160, 160, 0.3);
-@button-color: #8DC058;
+@button-color: #8dc058;
 @white: #fff;
 @stringVar: "Logo ";
 .logoStyle (@font-size) {
-  &:before{
+  &:before {
     content: @stringVar;
     font-size: @font-size;
-    font-family: 'Alfa Slab One', cursive;
+    font-family: "Alfa Slab One", cursive;
     font-style: italic;
   }
 }
@@ -23,9 +23,15 @@
   border-radius: 5px;
 }
 .placeholder {
-&::-webkit-input-placeholder {color:@second-elements-color;}
-&:-moz-placeholder          {color:@second-elements-color;}
-&:-ms-input-placeholder      {color:@second-elements-color;}
+  &::-webkit-input-placeholder {
+    color: @second-elements-color;
+  }
+  &:-moz-placeholder {
+    color: @second-elements-color;
+  }
+  &:-ms-input-placeholder {
+    color: @second-elements-color;
+  }
 }
 //--------------------------------
 html,
@@ -34,25 +40,28 @@ body.index-page {
   margin: 0;
   overflow: hidden;
 }
-body.index-page{
+body.index-page {
   background-color: @body-background-color;
-  color: @main-text-color; 
-  font-family: 'Roboto', sans-serif;
+  color: @main-text-color;
+  font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
 }
 header.index {
   flex-grow: 1;
   flex-basis: calc(100% / 11 * 1);
+  max-height: 66px;
+
 }
 .login-section {
   flex-grow: 7;
-  flex-basis: calc(100%/11*7);
+  flex-basis: calc(100% / 11 * 7);
+  max-height: 462px;
   background-color: @login-section-bg-color;
   display: flex;
   justify-content: center;
 }
-.form-section{
+.form-section {
   display: flex;
   width: 20%;
   min-width: 300px;
@@ -67,7 +76,7 @@ header.index {
     background-color: @login-section-bg-color;
     font-weight: 700;
     padding-top: 3%;
-      &:hover{
+    &:hover {
       color: @button-color;
     }
   }
@@ -75,7 +84,7 @@ header.index {
     font-size: 1.8em;
   }
   form {
-    input{
+    input {
       display: inline-block;
       width: 100%;
       height: 2em;
@@ -92,93 +101,96 @@ header.index {
         min-height: 2vw;
         cursor: pointer;
       }
-     
     }
-    label{
+    label {
       display: inline-block;
     }
     .checkbox {
       display: flex;
       margin-top: 5%;
-      input{
+      input {
         margin-top: 0px;
       }
       div {
         color: @second-elements-color;
         font-size: 0.9em;
         margin-left: 10%;
-        label:first-child{
+        label:first-child {
           font-weight: 700;
         }
       }
     }
-    }
   }
- footer {
+}
+footer {
   flex-grow: 3;
   flex-basis: calc(100% / 11 * 1);
- 
- section {
-  margin: 2em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  ol {
-    list-style: none;
-    li {
-      display: inline;
-      margin-right: 0.5em;
-    }
-  }
-  p {
-    color: @second-elements-bg-color;
-    font-size: .8em;
-   
-  }
-   &.footer-social {
-    li {
-      border-radius: 50%;
-      background-color: @second-elements-bg-color;
-      padding: 5px;
-      i {
-        width: 1em;
-        height: 1em;
+  max-height: 227px;
+
+  section {
+    margin: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ol {
+      list-style: none;
+      li {
+        display: inline;
+        margin-right: 0.5em;
+        .fb {
+          position: relative;
+          left: 0.3em;
+        }
       }
     }
     p {
-      .logoStyle(1.5em);
+      color: @second-elements-bg-color;
+      font-size: 0.8em;
     }
-  }
-  &.footer-contacts {
-    font-size: 0.7em;
-    p {
-      .logoStyle(3em);
-    }
-    li {
-      color: @main-text-color;
-      border-right: 1px solid @border-color;
-      padding-right: 5px;
-      &:last-child {
-        border: none;
+    &.footer-social {
+      li {
+        border-radius: 50%;
+        background-color: @second-elements-bg-color;
+        padding: 5px;
+        i {
+          width: 1em;
+          height: 1em;
+        }
       }
-      
-      
+      p {
+        .logoStyle(1.5em);
+      }
+    }
+    &.footer-contacts {
+      font-size: 0.7em;
+      p {
+        .logoStyle(3em);
+      }
+      li {
+        color: @main-text-color;
+        border-right: 1px solid @border-color;
+        padding-right: 5px;
+        &:last-child {
+          border: none;
+        }
+      }
     }
   }
- } 
- a {
-  text-decoration: none;
-  color: @main-text-color;
-  &:hover {
-    color: @button-color;
+  a {
+    text-decoration: none;
+    color: @main-text-color;
+    &:hover {
+      color: @button-color;
+    }
+  }
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid @border-color;
+    margin: 2em;
+    padding: 0;
   }
 }
- hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid @border-color;
-  margin: 2em;
-  padding: 0;
+input,button {outline:none;
 }
- }
