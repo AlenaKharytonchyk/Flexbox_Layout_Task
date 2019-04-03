@@ -1,3 +1,6 @@
+---
+permalink: /index.html
+---
 # Flexbox_Layout_Task
 
 Please create two layouts using flexbox properties as much as possible:
